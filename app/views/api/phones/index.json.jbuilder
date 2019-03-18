@@ -1,4 +1,4 @@
-@phones.each do |phone|
+json.array! @phones.each do |phone|
   json.phone_id phone.id
   json.name phone.name
   json.color phone.color

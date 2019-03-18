@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     get '/phones' => 'phones#index'
+    get '/phone/:id' => 'phones#show'
   end
 end

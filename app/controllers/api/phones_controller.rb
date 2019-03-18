@@ -4,4 +4,9 @@ class Api::PhonesController < ApplicationController
     @phones = Phone.all
     render 'index.json.jbuilder'
   end
+
+  def show
+    @phone = Phone.find_by(id: params[:id])
+    render 'show.json.jbuilder'
+  end
 end
