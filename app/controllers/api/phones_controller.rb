@@ -44,4 +44,13 @@ class Api::PhonesController < ApplicationController
       render json: {message: "phone not updated correctly..."}
     end
   end
+
+  def destroy
+    the_id = params[:id]
+    @phone = Phone.find_by(id: the_id)
+
+    @phone.destroy
+
+    render json: {message: "Phone deleted..."}
+  end
 end
