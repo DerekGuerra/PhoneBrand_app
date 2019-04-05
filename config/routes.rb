@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     get '/phones' => 'phones#index'
     get '/phones/:id' => 'phones#show'
     post '/phones' => 'phones#create'
+    patch '/phones/:id' => 'phones#update'
   end
 end
