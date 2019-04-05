@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   namespace :api do
     get '/phones' => 'phones#index'
     get '/phones/:id' => 'phones#show'
+    post '/phones' => 'phones#create'
   end
 end
